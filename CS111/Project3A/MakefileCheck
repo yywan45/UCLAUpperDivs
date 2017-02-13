@@ -1,0 +1,21 @@
+SHELL = /bin/bash
+CC = gcc
+CFLAGS = -g -Wall
+
+default: lab3a.c
+	$(CC) $(CFLAGS) lab3a.c -o lab3a
+
+check: lab3a disk-image
+	@./lab3a disk-image
+	@diff super.csv solutions/super.csv > /dev/null         && echo -e "SUPER:     PASS" || echo -e "SUPER:     FAIL"
+	@diff group.csv solutions/group.csv > /dev/null         && echo -e "GROUP:     PASS" || echo -e "GROUP:     FAIL"
+	@diff bitmap.csv solutions/bitmap.csv > /dev/null       && echo -e "BITMAP:    PASS" || echo -e "BITMAP:    FAIL"
+	@diff inode.csv solutions/inode.csv > /dev/null         && echo -e "INODE:     PASS" || echo -e "INODE:     FAIL"
+	@diff directory.csv solutions/directory.csv > /dev/null && echo -e "DIRECTORY: PASS" || echo -e "DIRECTORY: FAIL"
+	@diff indirect.csv solutions/indirect.csv > /dev/null   && echo -e "INDIRECT:  PASS" || echo -e "INDIRECT:  FAIL"
+
+clean:
+	@rm -rf lab3a *.o *.csv *.tar.gz *~
+
+dist: README Makefile lab3a.c
+	@tar -cvzf lab3a-804638846.tar.gz README Makefile lab3a.c

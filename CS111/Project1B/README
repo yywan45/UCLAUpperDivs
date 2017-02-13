@@ -1,0 +1,25 @@
+Yuen Yee WAN 804638846
+
+README:
+Current document with description of each file in tarball
+
+client.c:
+Connected to server program via	TCP connection
+Opens connection to specified port
+Sends input from keyboard to socket and echoes to display
+Logging option to log sent and received input/output
+
+server.c
+Connected to client program via TCP connection
+Receive client's commands, send them to shell
+Serve client and outputs commands
+
+* encrypt option for both source files can encrypt then decrypt traffic
+
+Makefile:
+Builds executable, cleans directory, makes tarball
+
+
+my.key
+Key of the encryption option of the client/server programs
+Allows client and server to encrypt/decrypt data

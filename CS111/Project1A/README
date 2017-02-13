@@ -1,0 +1,20 @@
+README:
+Current file
+
+Makefile:
+Builds executable, cleans directory, makes tarball.
+
+lab1a.c:
+Source code of program.
+- no options
+  Will display keyboard input to standard output
+  Program has exit option C-d
+- --shell option
+  Will pass input and output between terminal and child process
+  Program has several exit options such as C-c and C-d and "exit"
+
+Testing:
+Program was tested by building the executable and running the no option and --shell option on it. Seems to work generally fine according to the spec.
+
+Limitations:
+Program sometimes prints exit messages twice, or prints random exit numbers. Did not have time to resolve this thoroughly.

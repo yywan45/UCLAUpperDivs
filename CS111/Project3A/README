@@ -1,0 +1,21 @@
+Yuen Yee WAN 804-638-846
+
+lab3a.c
+Source file for the driver program
+
+Makefile
+Compiles the executable program lab3a from the source file lab3a.c
+Produces the csv files
+Clean removes all the files generated
+Dist creates the submission tarball
+Output produces csv files
+
+README
+Current file containing details of contents in tarball
+
+solutions (directory)
+Contains given sample csv files
+Used for testing
+
+Limitations
+Did not have sufficient time to finish implementing all sanity checks

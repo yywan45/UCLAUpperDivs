@@ -1,0 +1,26 @@
+CS 111 Project 0 (Fall 2016)
+
+README: This current file. A description of all the files in the tarball
+
+Makefile:
+1. Default builds the executable.
+2. Check performs a smoke test of the program and then removes the files used in the check.
+   i.   Checks that the input and output have same content.
+   ii.  Checks that the exit code with an existing input file is 0.
+   iii. Checks that the exit code with a non-existent input file is 1.
+   iv.  Checks that the exit code with a non-writable output file is 2.
+   v.   Checks that segfault option logs correct message.
+   vi.  Checks that catch option has exit code 3.
+   vii. Checks that catch option produces correct message.
+3. Clean clears all the files created when running the Makefile.
+4. Dist creates the tarball.
+
+lab0.c: Source code of program.
+
+stack_backtrace.png:
+Screenshot showing backtrace of program run with segfault option in gdb.
+
+breakpoint.png:
+Screenshot showing prograem run with segfault option in gdb with breakpoint set at line with segfault code. Print segfault_char and segfault_char[0] to confirm that it is null pointer.
+
+
